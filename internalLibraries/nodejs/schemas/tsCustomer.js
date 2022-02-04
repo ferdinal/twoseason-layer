@@ -5,7 +5,8 @@ const customerSchema = mongoose.Schema(
 	{
 		name: {
 			type: String,
-			required: true,
+			required: false,
+			default : null
 		},
 		phone: {
 			type: String,
