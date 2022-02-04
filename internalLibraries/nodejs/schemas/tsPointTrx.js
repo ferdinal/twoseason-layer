@@ -9,6 +9,11 @@ const pointTrxSchema = mongoose.Schema(
 			required: true,
 			ref: "Customer",
 		},
+		cashierId: {
+			type: mongoose.SchemaTypes.ObjectId,
+			required: true,
+			ref: "Cashier",
+		},
 		presentPoint: {
 			type: Number,
 			required: true,

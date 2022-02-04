@@ -6,7 +6,7 @@ const customerSchema = mongoose.Schema(
 		name: {
 			type: String,
 			required: false,
-			default : null
+			default: null,
 		},
 		phone: {
 			type: String,
@@ -34,7 +34,7 @@ const customerSchema = mongoose.Schema(
 		lockStatus: {
 			type: Boolean,
 			required: false,
-			default: null,
+			default: false,
 		},
 	},
 	{ timestamps: true, collection: "tsCustomers" }
