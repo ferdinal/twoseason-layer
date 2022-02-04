@@ -79,4 +79,3 @@ exports.failedAsync = (code, response, message, err) => {
 		headers,
 	};
 };
-//
