@@ -13,7 +13,6 @@ Resources:
       CodeUri: main/
       Handler: app.handler
       Runtime: nodejs12.x
-      Role: arn:aws:iam::310773848711:role/General_Role
       Layers:
         - !Ref ExternalNodeJSLayer
         - !Ref InternalNodeJSLayer
