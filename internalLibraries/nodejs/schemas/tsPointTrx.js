@@ -23,12 +23,13 @@ const pointTrxSchema = mongoose.Schema(
 		},
 		codeRef: {
 			type: String,
-			required: true,
+			required: false,
+			default: null,
 		},
 		typeTransaction: {
 			type: String,
 			required: true,
-			enum: ["topup", "payment", "refund"],
+			enum: ["new", "topup", "payment", "refund"],
 		},
 		description: {
 			type: String,
