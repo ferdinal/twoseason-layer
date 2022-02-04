@@ -10,7 +10,7 @@ exports.dbConnection = () => {
 			"mongodb+srv://Z1HbRfsRSlirQcTb:Z1HbRfsRSlirQcTb@cluster0.tkpuw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
 			{
 				useUnifiedTopology: true,
-				dbName: "sgi",
+				dbName: "productions",
 				useFindAndModify: false,
 				useNewUrlParser: true,
 				useCreateIndex: true,
@@ -40,7 +40,7 @@ exports.dbConnectionDev = () => {
 			"mongodb+srv://Z1HbRfsRSlirQcTb:Z1HbRfsRSlirQcTb@cluster0.tkpuw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
 			{
 				useUnifiedTopology: true,
-				dbName: "development",
+				dbName: "developments",
 				useFindAndModify: false,
 				useNewUrlParser: true,
 				useCreateIndex: true,
