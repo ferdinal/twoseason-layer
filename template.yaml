@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  nodejs-layer
+
+  Sample SAM Template for nodejs-layer
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Resources:
+  FunctionMainNodeJSLayer:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: main/
+      Handler: app.handler
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::310773848711:role/General_Role
+      Layers:
+        - !Ref ExternalNodeJSLayer
+        - !Ref InternalNodeJSLayer
+  ExternalNodeJSLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: external-dependencies-nodejs
+      Description: External Dependencies for Node JS
+      ContentUri: externalLibraries/.
+      CompatibleRuntimes:
+        - nodejs12.x
+  InternalNodeJSLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: internal-dependencies-nodejs
+      Description: Internal Dependencies for Node JS
+      ContentUri: internalLibraries/.
+      CompatibleRuntimes:
+        - nodejs12.x
